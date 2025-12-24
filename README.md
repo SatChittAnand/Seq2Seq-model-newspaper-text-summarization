@@ -91,6 +91,8 @@
 
 ##  Training Loop
 - **`num_epochs = 5`** → Number of passes through dataset.
+- **`manual_batches = 50`** → no. of batches per epoch
+- **`manual_batch_size = 8`** → controls how many samples per batch
 - **`model.train()`** → Sets model to training mode.
 - **`src_len = batch["src_mask"].sum(dim=1)`** → Computes actual sequence lengths.
 - **`loss.backward()`** → Backpropagation.

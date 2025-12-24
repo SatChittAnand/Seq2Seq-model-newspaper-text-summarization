@@ -90,7 +90,7 @@
 ---
 
 ##  Training Loop
-- **`num_epochs = 2`** → Number of passes through dataset.
+- **`num_epochs = 5`** → Number of passes through dataset.
 - **`model.train()`** → Sets model to training mode.
 - **`src_len = batch["src_mask"].sum(dim=1)`** → Computes actual sequence lengths.
 - **`loss.backward()`** → Backpropagation.

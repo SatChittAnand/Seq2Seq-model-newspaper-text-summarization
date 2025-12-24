@@ -108,14 +108,12 @@
 
 ```mermaid
 graph TD
-A[Article (Input Text)] --> B[Tokenizer: Convert text to tokens]
-B --> C[Dataset & DataLoader: Batch preparation]
-C --> D[Encoder (BiLSTM): Embeddings + hidden states]
-D --> E[Attention Mechanism: Bahdanau / Luong]
-E --> F[Decoder (LSTM): Generates next token]
-F --> G[Seq2Seq Model: Combines encoder + decoder]
-G --> H[Training Loop: Loss + Optimization]
-H --> I[Output Summary: Generated Highlights]
+A[Load Data] --> B[Preprocess Tweets]
+B --> C[Feature Extraction: CBoW & TF-IDF]
+C --> D[Train Models: LogReg, XGBoost, Decision Tree]
+D --> E[Evaluate via F1-Score]
+E --> F[Visualize Results]
+F --> G[Predict on Test Data]
 ```
 ---
 

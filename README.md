@@ -105,16 +105,17 @@
 - **`model.to(device)`** → Moves model to GPU(s).
 
 ---
+
 ```mermaid
 flowchart TD
-    A[ Article (Input Text)] --> B[ Tokenizer\nConvert text → tokens]
-    B --> C[ Dataset & DataLoader\nBatch preparation]
-    C --> D[ Encoder (BiLSTM)\nEmbeddings + hidden states]
-    D --> E[ Attention Mechanism\nBahdanau / Luong]
-    E --> F[ Decoder (LSTM)\nGenerates next token]
-    F --> G[ Seq2Seq Model\nCombines encoder + decoder]
-    G --> H[ Training Loop\nLoss + Optimization]
-    H --> I[ Output Summary\nGenerated Highlights]
+    A[Article (Input Text)] --> B[Tokenizer: Convert text to tokens]
+    B --> C[Dataset & DataLoader: Batch preparation]
+    C --> D[Encoder (BiLSTM): Embeddings + hidden states]
+    D --> E[Attention Mechanism: Bahdanau / Luong]
+    E --> F[Decoder (LSTM): Generates next token]
+    F --> G[Seq2Seq Model: Combines encoder + decoder]
+    G --> H[Training Loop: Loss + Optimization]
+    H --> I[Output Summary: Generated Highlights]
 
 ---
 

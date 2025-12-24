@@ -2,7 +2,7 @@
 
 ---
 
-## 📂 Data Loading
+## Data Loading
 - **`import numpy as np`** → Loads NumPy, a library for numerical computations.
 - **`import pandas as pd`** → Loads Pandas, used for handling tabular data (CSV files).
 - **`os.walk('/kaggle/input')`** → Iterates through files in the Kaggle input directory.
@@ -10,7 +10,7 @@
 
 ---
 
-## 📰 Dataset Structure
+## Dataset Structure
 - **`train_df.shape`** → Shows rows × columns of the training dataset.
 - **`train_df.head()`** → Displays the first few rows.
 - **`train_df.columns`** → Lists column names (e.g., `"article"`, `"highlights"`).
@@ -19,7 +19,7 @@
 
 ---
 
-## 🔤 Tokenization
+## Tokenization
 - **`AutoTokenizer.from_pretrained("facebook/bart-base")`** → Loads a pretrained tokenizer for BART.
 - **`tokenizer(..., max_length=512, truncation=True, padding="max_length")`**  
   - `max_length` → Maximum sequence length.  
@@ -103,6 +103,18 @@
 ##  Multi-GPU Training
 - **`nn.DataParallel(model)`** → Wraps model to run on multiple GPUs.
 - **`model.to(device)`** → Moves model to GPU(s).
+
+---
+```mermaid
+flowchart TD
+    A[ Article (Input Text)] --> B[ Tokenizer\nConvert text → tokens]
+    B --> C[ Dataset & DataLoader\nBatch preparation]
+    C --> D[ Encoder (BiLSTM)\nEmbeddings + hidden states]
+    D --> E[ Attention Mechanism\nBahdanau / Luong]
+    E --> F[ Decoder (LSTM)\nGenerates next token]
+    F --> G[ Seq2Seq Model\nCombines encoder + decoder]
+    G --> H[ Training Loop\nLoss + Optimization]
+    H --> I[ Output Summary\nGenerated Highlights]
 
 ---
 

@@ -139,6 +139,12 @@ H --> I[Output Summary: Generated Highlights]
 
 ---
 
+![WhatsApp Image 2025-12-29 at 11 53 43 PM](https://github.com/user-attachments/assets/0a9f1864-d941-4ea4-966d-94df3142c6ba)
+
+![WhatsApp Image 2025-12-30 at 12 17 25 AM](https://github.com/user-attachments/assets/5612d0a6-9a4d-49e3-a848-64248b30cf20)
+
+
+
 ## Advantages & Disadvantages
 
 ### Bahdanau Attention
